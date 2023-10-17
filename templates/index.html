@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alkatra:wght@700&family=Anton&family=Josefin+Sans:ital,wght@0,200;0,400;1,100&family=Kanit:wght@300&family=Playfair+Display:wght@600&family=Poppins:ital,wght@0,400;0,500;1,300;1,400&family=Ubuntu:wght@700&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <title>Thyroid Disease Detection</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Alkatra:wght@700&family=Anton&family=Josefin+Sans:ital,wght@0,200;0,400;1,100&family=Kanit:wght@300&family=Playfair+Display:wght@600&family=Poppins:ital,wght@0,400;0,500;1,300;1,400&family=Ubuntu:wght@700&family=Work+Sans:wght@500&display=swap');
+
+        body {
+            
+            background-color: #3c3c3c;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .outer{
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.1);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .inner {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        #input,
+        select {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            /* pointer-events: painted;
+             */
+             cursor: pointer;
+             /* grid-template-columns: max-content;
+              */
+              display: flexbox;
+        }
+
+        #label {
+            font-size: large;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset class="outer">
+        <h1>Thyroid Disease Detection Test</h1>
+        <h4>Please ensure the patient information is correct</h4>
+    </fieldset>
+
+    <fieldset class="inner">
+        <form action="/predict" method="post">
+            <!-- Age -->
+            <label for="age" id="label">Age:</label>
+            <input type="number" name="age" min="1" max="100" id="input">
+
+            <!-- Sex -->
+            <label for="sex" id="label">Sex:</label>
+            <select name="sex" id="input">
+                <option value="0.0">Female</option>
+                <option value="1.0">Male</option>
+            </select>
+
+            <!-- On Thyroxine -->
+            <label for="on_thyroxine" id="label">On Thyroxine:</label>
+            <select name="on_thyroxine" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- Query On Thyroxine -->
+            <label for="query_on_thyroxine" id="label">Query On Thyroxine:</label>
+            <select name="query_on_thyroxine" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- On Antithyroid Medication -->
+            <label for="on_antithyroid_medication" id="label">On Antithyroid Medication:</label>
+            <select name="on_antithyroid_medication" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- Sick -->
+            <label for="sick" id="label">Sick:</label>
+            <select name="sick" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- Pregnant -->
+            <label for="pregnant" id="label">Pregnant:</label>
+            <select name="pregnant" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- Thyroid Surgery -->
+            <label for="thyroid_surgery" id="label">Thyroid Surgery:</label>
+            <select name="thyroid_surgery" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- I131 Treatment -->
+            <label for="I131_treatment" id="label">I131 Treatment:</label>
+            <select name="I131_treatment" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- Query Hypothyroid -->
+            <label for="query_hypothyroid" id="label">Query Hypothyroid:</label>
+            <select name="query_hypothyroid" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- Query Hyperthyroid -->
+            <label for="query_hyperthyroid" id="label">Query Hyperthyroid:</label>
+            <select name="query_hyperthyroid" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- Lithium -->
+            <label for="lithium" id="label">Lithium:</label>
+            <select name="lithium" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- Goitre -->
+            <label for="goitre" id="label">Goitre:</label>
+            <select name="goitre" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- Tumor -->
+            <label for="tumor" id="label">Tumor:</label>
+            <select name="tumor" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+            <!-- Hypopituitary -->
+            <label for="hypopituitary" id="label">Hypopituitary:</label>
+            <select name="hypopituitary" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- Psych -->
+            <label for="psych" id="label">Psych:</label>
+            <select name="psych" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- TSH Measured -->
+            <label for="TSH_measured" id="label">TSH Measured:</label>
+            <select name="TSH_measured" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- TSH -->
+            <label for="TSH" id="label">TSH:</label>
+            <input type="text" name="TSH" id="input">
+
+            <!-- T3 Measured -->
+            <label for="T3_measured" id="label">T3 Measured:</label>
+            <select name="T3_measured" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- T3 -->
+            <label for="T3" id="label">T3:</label>
+            <input type="text" name="T3" id="input">
+
+            <!-- TT4 Measured -->
+            <label for="TT4_measured" id="label">TT4 Measured:</label>
+            <select name="TT4_measured" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- TT4 -->
+            <label for="TT4" id="label">TT4:</label>
+            <input type="text" name="TT4" id="input">
+
+            <!-- T4U Measured -->
+            <label for="T4U_measured" id="label">T4U Measured:</label>
+            <select name="T4U_measured" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- T4U -->
+            <label for="T4U" id="label">T4U:</label>
+            <input type="text" name="T4U" id="input">
+
+            <!-- FTI Measured -->
+            <label for="FTI_measured" id="label">FTI Measured:</label>
+            <select name="FTI_measured" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <!-- FTI -->
+            <label for="FTI" id="label">FTI:</label>
+            <input type="text" name="FTI" id="input">
+
+            <!-- TBG Measured -->
+            <label for="TBG_measured" id="label">TBG Measured:</label>
+            <select name="TBG_measured" id="input">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+ 
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+[2023-10-17 09:45:48,295]224 werkzeug-WARNING - * Debugger is active!
+[2023-10-17 09:45:48,306]224 werkzeug-INFO - * Debugger PIN: 172-645-412
+[2023-10-17 09:46:07,346]224 werkzeug-INFO -127.0.0.1 - - [17/Oct/2023 09:46:07] "GET / HTTP/1.1" 200 -
+[2023-10-17 09:46:13,589]28 root-INFO -Model is start at time 30.1180623
+[2023-10-17 09:46:13,589]29 root-INFO -Data Ingestion is start from mongodb
+[2023-10-17 09:46:13,589]64 root-INFO -Enter into the data ingestion method
+[2023-10-17 09:46:13,589]50 root-INFO -Enter into the save dataset 
+[2023-10-17 09:46:13,589]37 root-INFO -Enter into the dataset read
+[2023-10-17 09:46:13,589]26 root-INFO -Enter into the collections
+[2023-10-17 09:46:13,595]33 root-ERROR -All nameservers failed to answer the query _mongodb._tcp.cluster0.r31hq0n.mongodb.net. IN SRV: Server 192.168.29.1 UDP port 53 answered [WinError 10051] A socket operation was attempted to an unreachable network
+[2023-10-17 09:46:13,595]45 root-ERROR -Error occurred python script name [D:\Thyroid_Disease_Detection\src\components\data_ingestion.py] line number [27] error message [All nameservers failed to answer the query _mongodb._tcp.cluster0.r31hq0n.mongodb.net. IN SRV: Server 192.168.29.1 UDP port 53 answered [WinError 10051] A socket operation was attempted to an unreachable network]
+[2023-10-17 09:46:13,595]58 root-ERROR -Error occurred python script name [D:\Thyroid_Disease_Detection\src\components\data_ingestion.py] line number [38] error message [Error occurred python script name [D:\Thyroid_Disease_Detection\src\components\data_ingestion.py] line number [27] error message [All nameservers failed to answer the query _mongodb._tcp.cluster0.r31hq0n.mongodb.net. IN SRV: Server 192.168.29.1 UDP port 53 answered [WinError 10051] A socket operation was attempted to an unreachable network]]
+[2023-10-17 09:46:13,596]69 root-ERROR -Error occurred python script name [D:\Thyroid_Disease_Detection\src\components\data_ingestion.py] line number [51] error message [Error occurred python script name [D:\Thyroid_Disease_Detection\src\components\data_ingestion.py] line number [38] error message [Error occurred python script name [D:\Thyroid_Disease_Detection\src\components\data_ingestion.py] line number [27] error message [All nameservers failed to answer the query _mongodb._tcp.cluster0.r31hq0n.mongodb.net. IN SRV: Server 192.168.29.1 UDP port 53 answered [WinError 10051] A socket operation was attempted to an unreachable network]]]
+[2023-10-17 09:46:13,596]41 root-ERROR -Error occurred python script name [D:\Thyroid_Disease_Detection\src\components\data_ingestion.py] line number [65] error message [Error occurred python script name [D:\Thyroid_Disease_Detection\src\components\data_ingestion.py] line number [51] error message [Error occurred python script name [D:\Thyroid_Disease_Detection\src\components\data_ingestion.py] line number [38] error message [Error occurred python script name [D:\Thyroid_Disease_Detection\src\components\data_ingestion.py] line number [27] error message [All nameservers failed to answer the query _mongodb._tcp.cluster0.r31hq0n.mongodb.net. IN SRV: Server 192.168.29.1 UDP port 53 answered [WinError 10051] A socket operation was attempted to an unreachable network]]]]
+[2023-10-17 09:46:13,666]224 werkzeug-INFO -127.0.0.1 - - [17/Oct/2023 09:46:13] "[35m[1mGET /train HTTP/1.1[0m" 500 -
+[2023-10-17 09:46:13,740]224 werkzeug-INFO -127.0.0.1 - - [17/Oct/2023 09:46:13] "[36mGET /train?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2023-10-17 09:46:13,742]224 werkzeug-INFO -127.0.0.1 - - [17/Oct/2023 09:46:13] "[36mGET /train?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2023-10-17 09:46:13,777]224 werkzeug-INFO -127.0.0.1 - - [17/Oct/2023 09:46:13] "[36mGET /train?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2023-10-17 09:46:53,254]28 root-INFO -Model is start at time 69.7829787
+[2023-10-17 09:46:53,254]29 root-INFO -Data Ingestion is start from mongodb
+[2023-10-17 09:46:53,255]64 root-INFO -Enter into the data ingestion method
+[2023-10-17 09:46:53,255]50 root-INFO -Enter into the save dataset 
+[2023-10-17 09:46:53,255]37 root-INFO -Enter into the dataset read
+[2023-10-17 09:46:53,255]26 root-INFO -Enter into the collections
+[2023-10-17 09:46:53,396]30 root-INFO -Collections name is Collection(Database(MongoClient(host=['ac-hcxtbjb-shard-00-01.r31hq0n.mongodb.net:27017', 'ac-hcxtbjb-shard-00-00.r31hq0n.mongodb.net:27017', 'ac-hcxtbjb-shard-00-02.r31hq0n.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', authsource='admin', replicaset='atlas-ukp69g-shard-0', ssl=True), 'Thyroid_Dataset'), 'Data') we are at exit point of collections
+[2023-10-17 09:46:56,056]42 root-INFO -Exit from datasetread from MongoDB 
+[2023-10-17 09:46:56,100]55 root-INFO -Successfuly save into the artifact folder into artifact\hypothyroid.csv
+[2023-10-17 09:46:56,104]66 root-INFO -Exit from the data ingestion method of Data Ingestion 
+[2023-10-17 09:46:56,104]31 root-INFO -Data is successfully saved into the artifact folder
+[2023-10-17 09:46:56,104]32 root-INFO -Data Transformation is start 
+[2023-10-17 09:46:56,104]124 root-INFO -Enter into the data transformation
+[2023-10-17 09:46:56,104]107 root-INFO -Enter into the scale the data 
+[2023-10-17 09:46:56,104]92 root-INFO -Enter into the train test split 
+[2023-10-17 09:46:56,104]44 root-INFO -Cleaning process of data is start ...
+[2023-10-17 09:46:56,104]33 root-INFO -Enter into read data of data transformation
+[2023-10-17 09:46:56,145]35 root-INFO -Successfully read the data artifact\hypothyroid.csv
+[2023-10-17 09:46:56,290]71 root-INFO -After some clean the data now start the fill the missing value
+[2023-10-17 09:46:56,356]79 root-INFO -We get the clean data and save into artifact 
+[2023-10-17 09:46:56,404]82 root-INFO -Save the clean the data
+[2023-10-17 09:46:56,410]97 root-INFO -Exit from the train test split 
+[2023-10-17 09:46:56,424]45 root-INFO -Enter into the save pickle file 
+[2023-10-17 09:46:56,425]48 root-INFO -Save the object
+[2023-10-17 09:46:56,425]113 root-INFO -Exit from the scale method and the save the scale into artifact
+[2023-10-17 09:46:56,426]126 root-INFO -Successfully run the data transformation file
+[2023-10-17 09:46:56,426]34 root-INFO -Data cleaning is successfully and saved into the artifact 
+[2023-10-17 09:46:56,426]35 root-INFO -Model train is start
+[2023-10-17 09:46:56,426]65 root-INFO -Enter into the model train
+[2023-10-17 09:46:56,426]48 root-INFO -Enter into the fit of model
+[2023-10-17 09:46:56,426]24 root-INFO -Model architecture is defined
+[2023-10-17 09:46:56,983]34 root-INFO -Architecture has been successfully defined
+[2023-10-17 09:46:56,999]24 root-INFO -Enter into the save model method
+[2023-10-17 09:46:57,046]26 root-INFO -Model has been saved successfully
+[2023-10-17 09:46:57,047]50 root-INFO -Safely load the model
+[2023-10-17 09:46:57,047]34 root-INFO -Enter into the load model method of utils
+[2023-10-17 09:46:57,133]36 root-INFO -Exit from the load model method of utils
+[2023-10-17 09:47:22,332]24 root-INFO -Enter into the save model method
+[2023-10-17 09:47:22,372]26 root-INFO -Model has been saved successfully
+[2023-10-17 09:47:22,372]67 root-INFO -Exit from model train
+[2023-10-17 09:47:22,372]37 root-INFO ----------Model is train Successfully and lets do predtiction---------
+[2023-10-17 09:47:22,372]39 root-INFO -Model is end at 98.9009684
+[2023-10-17 09:47:22,373]224 werkzeug-INFO -127.0.0.1 - - [17/Oct/2023 09:47:22] "GET /train HTTP/1.1" 200 -
+[2023-10-17 09:49:30,431]105 root-INFO -Enter into the Prediction now Prediction is too bee start.... 
+[2023-10-17 09:49:30,431]34 root-INFO -Enter into the load model method of utils
+[2023-10-17 09:49:30,645]36 root-INFO -Exit from the load model method of utils
+[2023-10-17 09:49:30,649]56 root-INFO -Enter into the load pickle method
+[2023-10-17 09:49:30,659]59 root-INFO -Successfully load the model 
+[2023-10-17 09:49:31,003]224 werkzeug-INFO -127.0.0.1 - - [17/Oct/2023 09:49:31] "POST /predict HTTP/1.1" 200 -
+[2023-10-17 09:51:47,797]105 root-INFO -Enter into the Prediction now Prediction is too bee start.... 
+[2023-10-17 09:51:47,798]34 root-INFO -Enter into the load model method of utils
+[2023-10-17 09:51:48,001]36 root-INFO -Exit from the load model method of utils
+[2023-10-17 09:51:48,003]56 root-INFO -Enter into the load pickle method
+[2023-10-17 09:51:48,004]59 root-INFO -Successfully load the model 
+[2023-10-17 09:51:48,197]224 werkzeug-INFO -127.0.0.1 - - [17/Oct/2023 09:51:48] "POST /predict HTTP/1.1" 200 -

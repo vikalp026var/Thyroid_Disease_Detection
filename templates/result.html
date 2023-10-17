@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Thyroid Disease Detection</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alkatra:wght@700&family=Anton&family=Josefin+Sans:ital,wght@0,200;0,400;1,100&family=Kanit:wght@300&family=Playfair+Display:wght@600&family=Poppins:ital,wght@0,400;0,500;1,300;1,400&family=Ubuntu:wght@700&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<style>
+      @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Alkatra:wght@700&family=Anton&family=Josefin+Sans:ital,wght@0,200;0,400;1,100&family=Kanit:wght@300&family=Playfair+Display:wght@600&family=Poppins:ital,wght@0,400;0,500;1,300;1,400&family=Ubuntu:wght@700&family=Work+Sans:wght@500&display=swap');
+     body{
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+             
+           background-color: #3c3c3c;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+     }
+     .result{
+          width: 1450px;
+     }
+</style>
+<body>
+     <fieldset class="result">
+          <form action="/predict" method="post">
+               <h1>Person is Suffering from Thyroid Disease: <span style="color: red;">{{result}}</span></h1>
+               <a href="http://localhost:8080/train" style="color: white;">Back</a>
+          </form>
+     </fieldset>
+</body>
+</html>

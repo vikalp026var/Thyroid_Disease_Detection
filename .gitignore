@@ -1,0 +1,6 @@
+.env/
+.fish
+.logs
+.offerletter
+.demo.py
+.Thyroid.h5
