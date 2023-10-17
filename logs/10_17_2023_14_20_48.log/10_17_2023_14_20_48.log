@@ -1,0 +1,95 @@
+[2023-10-17 14:20:51,891]224 werkzeug-WARNING - * Debugger is active!
+[2023-10-17 14:20:51,896]224 werkzeug-INFO - * Debugger PIN: 112-218-580
+[2023-10-17 14:21:24,415]224 werkzeug-INFO -127.0.0.1 - - [17/Oct/2023 14:21:24] "GET / HTTP/1.1" 200 -
+[2023-10-17 14:21:30,272]28 root-INFO -Model is start at time 42.6321512
+[2023-10-17 14:21:30,273]29 root-INFO -Data Ingestion is start from mongodb
+[2023-10-17 14:21:30,273]64 root-INFO -Enter into the data ingestion method
+[2023-10-17 14:21:30,273]50 root-INFO -Enter into the save dataset 
+[2023-10-17 14:21:30,273]37 root-INFO -Enter into the dataset read
+[2023-10-17 14:21:30,273]26 root-INFO -Enter into the collections
+[2023-10-17 14:21:30,373]30 root-INFO -Collections name is Collection(Database(MongoClient(host=['ac-hcxtbjb-shard-00-00.r31hq0n.mongodb.net:27017', 'ac-hcxtbjb-shard-00-02.r31hq0n.mongodb.net:27017', 'ac-hcxtbjb-shard-00-01.r31hq0n.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', authsource='admin', replicaset='atlas-ukp69g-shard-0', ssl=True), 'Thyroid_Dataset'), 'Data') we are at exit point of collections
+[2023-10-17 14:21:31,978]42 root-INFO -Exit from datasetread from MongoDB 
+[2023-10-17 14:21:32,017]55 root-INFO -Successfuly save into the artifact folder into artifact\hypothyroid.csv
+[2023-10-17 14:21:32,019]66 root-INFO -Exit from the data ingestion method of Data Ingestion 
+[2023-10-17 14:21:32,019]31 root-INFO -Data is successfully saved into the artifact folder
+[2023-10-17 14:21:32,019]32 root-INFO -Data Transformation is start 
+[2023-10-17 14:21:32,019]124 root-INFO -Enter into the data transformation
+[2023-10-17 14:21:32,019]107 root-INFO -Enter into the scale the data 
+[2023-10-17 14:21:32,019]92 root-INFO -Enter into the train test split 
+[2023-10-17 14:21:32,019]44 root-INFO -Cleaning process of data is start ...
+[2023-10-17 14:21:32,020]33 root-INFO -Enter into read data of data transformation
+[2023-10-17 14:21:32,062]35 root-INFO -Successfully read the data artifact\hypothyroid.csv
+[2023-10-17 14:21:32,218]71 root-INFO -After some clean the data now start the fill the missing value
+[2023-10-17 14:21:32,258]79 root-INFO -We get the clean data and save into artifact 
+[2023-10-17 14:21:32,316]82 root-INFO -Save the clean the data
+[2023-10-17 14:21:32,326]97 root-INFO -Exit from the train test split 
+[2023-10-17 14:21:32,336]45 root-INFO -Enter into the save pickle file 
+[2023-10-17 14:21:32,337]48 root-INFO -Save the object
+[2023-10-17 14:21:32,337]113 root-INFO -Exit from the scale method and the save the scale into artifact
+[2023-10-17 14:21:32,338]126 root-INFO -Successfully run the data transformation file
+[2023-10-17 14:21:32,338]34 root-INFO -Data cleaning is successfully and saved into the artifact 
+[2023-10-17 14:21:32,338]35 root-INFO -Model train is start
+[2023-10-17 14:21:32,338]65 root-INFO -Enter into the model train
+[2023-10-17 14:21:32,338]48 root-INFO -Enter into the fit of model
+[2023-10-17 14:21:32,339]24 root-INFO -Model architecture is defined
+[2023-10-17 14:21:33,390]34 root-INFO -Architecture has been successfully defined
+[2023-10-17 14:21:33,404]24 root-INFO -Enter into the save model method
+[2023-10-17 14:21:33,445]26 root-INFO -Model has been saved successfully
+[2023-10-17 14:21:33,446]50 root-INFO -Safely load the model
+[2023-10-17 14:21:33,446]34 root-INFO -Enter into the load model method of utils
+[2023-10-17 14:21:33,543]36 root-INFO -Exit from the load model method of utils
+[2023-10-17 14:21:53,062]24 root-INFO -Enter into the save model method
+[2023-10-17 14:21:53,088]26 root-INFO -Model has been saved successfully
+[2023-10-17 14:21:53,088]67 root-INFO -Exit from model train
+[2023-10-17 14:21:53,088]37 root-INFO ----------Model is train Successfully and lets do predtiction---------
+[2023-10-17 14:21:53,088]39 root-INFO -Model is end at 65.448617
+[2023-10-17 14:21:53,089]224 werkzeug-INFO -127.0.0.1 - - [17/Oct/2023 14:21:53] "GET /train HTTP/1.1" 200 -
+[2023-10-17 14:22:42,191]105 root-INFO -Enter into the Prediction now Prediction is too bee start.... 
+[2023-10-17 14:22:42,191]34 root-INFO -Enter into the load model method of utils
+[2023-10-17 14:22:42,287]36 root-INFO -Exit from the load model method of utils
+[2023-10-17 14:22:42,291]56 root-INFO -Enter into the load pickle method
+[2023-10-17 14:22:42,297]59 root-INFO -Successfully load the model 
+[2023-10-17 14:22:42,429]224 werkzeug-INFO -127.0.0.1 - - [17/Oct/2023 14:22:42] "POST /predict HTTP/1.1" 200 -
+[2023-10-17 14:29:46,847]28 root-INFO -Model is start at time 539.2073592
+[2023-10-17 14:29:46,847]29 root-INFO -Data Ingestion is start from mongodb
+[2023-10-17 14:29:46,847]64 root-INFO -Enter into the data ingestion method
+[2023-10-17 14:29:46,848]50 root-INFO -Enter into the save dataset 
+[2023-10-17 14:29:46,848]37 root-INFO -Enter into the dataset read
+[2023-10-17 14:29:46,848]26 root-INFO -Enter into the collections
+[2023-10-17 14:29:46,899]30 root-INFO -Collections name is Collection(Database(MongoClient(host=['ac-hcxtbjb-shard-00-00.r31hq0n.mongodb.net:27017', 'ac-hcxtbjb-shard-00-02.r31hq0n.mongodb.net:27017', 'ac-hcxtbjb-shard-00-01.r31hq0n.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', authsource='admin', replicaset='atlas-ukp69g-shard-0', ssl=True), 'Thyroid_Dataset'), 'Data') we are at exit point of collections
+[2023-10-17 14:29:48,548]42 root-INFO -Exit from datasetread from MongoDB 
+[2023-10-17 14:29:48,572]55 root-INFO -Successfuly save into the artifact folder into artifact\hypothyroid.csv
+[2023-10-17 14:29:48,574]66 root-INFO -Exit from the data ingestion method of Data Ingestion 
+[2023-10-17 14:29:48,574]31 root-INFO -Data is successfully saved into the artifact folder
+[2023-10-17 14:29:48,574]32 root-INFO -Data Transformation is start 
+[2023-10-17 14:29:48,574]124 root-INFO -Enter into the data transformation
+[2023-10-17 14:29:48,574]107 root-INFO -Enter into the scale the data 
+[2023-10-17 14:29:48,574]92 root-INFO -Enter into the train test split 
+[2023-10-17 14:29:48,574]44 root-INFO -Cleaning process of data is start ...
+[2023-10-17 14:29:48,574]33 root-INFO -Enter into read data of data transformation
+[2023-10-17 14:29:48,615]35 root-INFO -Successfully read the data artifact\hypothyroid.csv
+[2023-10-17 14:29:48,715]71 root-INFO -After some clean the data now start the fill the missing value
+[2023-10-17 14:29:48,738]79 root-INFO -We get the clean data and save into artifact 
+[2023-10-17 14:29:48,772]82 root-INFO -Save the clean the data
+[2023-10-17 14:29:48,775]97 root-INFO -Exit from the train test split 
+[2023-10-17 14:29:48,782]45 root-INFO -Enter into the save pickle file 
+[2023-10-17 14:29:48,782]48 root-INFO -Save the object
+[2023-10-17 14:29:48,783]113 root-INFO -Exit from the scale method and the save the scale into artifact
+[2023-10-17 14:29:48,783]126 root-INFO -Successfully run the data transformation file
+[2023-10-17 14:29:48,783]34 root-INFO -Data cleaning is successfully and saved into the artifact 
+[2023-10-17 14:29:48,783]35 root-INFO -Model train is start
+[2023-10-17 14:29:48,783]65 root-INFO -Enter into the model train
+[2023-10-17 14:29:48,783]48 root-INFO -Enter into the fit of model
+[2023-10-17 14:29:48,783]24 root-INFO -Model architecture is defined
+[2023-10-17 14:29:48,830]34 root-INFO -Architecture has been successfully defined
+[2023-10-17 14:29:48,838]24 root-INFO -Enter into the save model method
+[2023-10-17 14:29:48,847]26 root-INFO -Model has been saved successfully
+[2023-10-17 14:29:48,848]50 root-INFO -Safely load the model
+[2023-10-17 14:29:48,848]34 root-INFO -Enter into the load model method of utils
+[2023-10-17 14:29:48,920]36 root-INFO -Exit from the load model method of utils
+[2023-10-17 14:30:02,890]24 root-INFO -Enter into the save model method
+[2023-10-17 14:30:02,912]26 root-INFO -Model has been saved successfully
+[2023-10-17 14:30:02,912]67 root-INFO -Exit from model train
+[2023-10-17 14:30:02,913]37 root-INFO ----------Model is train Successfully and lets do predtiction---------
+[2023-10-17 14:30:02,913]39 root-INFO -Model is end at 555.2721477
+[2023-10-17 14:30:02,913]224 werkzeug-INFO -127.0.0.1 - - [17/Oct/2023 14:30:02] "GET /train HTTP/1.1" 200 -
