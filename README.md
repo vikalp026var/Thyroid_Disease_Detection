@@ -1,4 +1,4 @@
-![Alt text](image.png)
+![Alt text](https://github.com/vikalp026var/Thyroid_Disease_Detection/blob/main/image-1.png)
 
 
 Thyroid Disease Detection
