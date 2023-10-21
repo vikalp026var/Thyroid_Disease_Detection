@@ -30,7 +30,7 @@ conda activate <your environment name>
 
 
 python app.py
-
+ Accuracy:99.64%
 
 Dataset Description for Thyroid Disease Detection
 
