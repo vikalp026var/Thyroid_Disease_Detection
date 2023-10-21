@@ -21,7 +21,7 @@ Installation
 
 To install and run this project, follow the steps below:
 
-git clone https://github.com/your_username/Thyroid_Disease_Detection
+git clone https://github.com/vikalp026var/Thyroid_Disease_Detection
 
 cd thyroid-disease-detection
 
